@@ -13,3 +13,18 @@ except OSError:
 
 
 pprint.pprint(data)
+
+# Вывести company email phone address
+for index, i in enumerate(data):
+	obj = {}
+	obj.update(
+			{
+				'company' : i.get('company'),
+				'email' : i.get('email'),
+				'phone' : i.get('phone'),
+				'address' : i.get('address')
+			}
+		)
+
+	print("\nIndex", index)
+	pprint.pprint(obj)
